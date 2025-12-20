@@ -27,13 +27,11 @@ def train_catboost_model(X_train, y_train, X_val, y_val, cat_features, text_feat
         "random_state": 42,
         "train_dir": "catboost_info",
         "text_processing": ["NaiveBayes+Word|BoW+Word"],
-        # Lưu ý: "task_type": "GPU" yêu cầu máy có GPU. 
-        # Nếu chạy trên CPU, hãy đổi thành "CPU" hoặc xóa dòng này.
         "task_type": "CPU", 
         "one_hot_max_size": 3,
         "depth": 6,
         "auto_class_weights": "Balanced",
-        "bootstrap_type": "Poisson",
+        "bootstrap_type": "Bernoulli",
         "subsample": 0.5,
         "max_bin": 100
     }
