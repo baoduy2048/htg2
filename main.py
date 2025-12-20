@@ -142,7 +142,7 @@ def main():
             params={
                 "task_type": "CPU", 
                 "iterations": 2000, 
-                "max_depth": 7 # Tăng depth như notebook gốc
+                "depth": 7
             },
             verbose=200
         )
