@@ -48,7 +48,7 @@ pip install -r requirements.txt
 ```
 ## Chạy Speed Layer với Docker
 
-### Crawler Speed (Thu thập dữ liệu)
+### 1. Crawler Speed (Thu thập dữ liệu)
 ```bash
 cd speed/crawler_speed
 docker build -t bigdata/speed-crawler:latest .
@@ -58,7 +58,7 @@ docker run -d \
   -v /home/anh/speed_logs:/app/logs \
   bigdata/speed-crawler:latest python main.py
 ```
-### OHLCV Processor
+### 2. OHLCV Processor
 ```bash
 cd speed/ohlcv
 docker build -t bigdata/speed-ohlcv:latest .
@@ -68,7 +68,7 @@ docker run -d \
   -v /home/anh/speed_logs:/app/logs \
   bigdata/speed-ohlcv:latest python ohlcv_speed.py
 ```
-### Debug interactive container
+### 3. Debug interactive container
 ```bash
 # Debug Crawler
 docker run -it \
